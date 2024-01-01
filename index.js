@@ -13,10 +13,16 @@
 // five: 1 - 43
 
 function getNumber (maxNumber) {
-    const baseNumber = Math.ceil((Math.random() * 100));
+    let baseNumber = Math.ceil((Math.random() * 100)),
+        newNumber = baseNumber % (maxNumber + 1);
 
-    return baseNumber % (maxNumber + 1);
+    while (newNumber == 0) {
+        console.warn('WARN: we got 0 - need to generate another random seed value');
+        baseNumber = Math.ceil((Math.random() * 100));
+        newNumber = baseNumber % (maxNumber + 1);
+    }
 
+    return newNumber;
 }
 
 function getPowerballNumbers () {
