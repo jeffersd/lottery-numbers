@@ -62,7 +62,7 @@ function getCash5Numbers (runs) {
 
 
 function main (lotteryNameArgument, runsArgument) {
-    const errorMessage = 'ERROR: need to run this script with an argument: <p|m|c>';
+    const errorMessage = 'ERROR: need to run this script with an argument: <powerball|megamillions|cash5>';
 
     let runs = parseInt(runsArgument);
 
